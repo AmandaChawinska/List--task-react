@@ -7,7 +7,7 @@ import Header from "./Header/index";
 import Container from "./Container/index";
 
 const tasks = [
-  { id: 1, content: "przejść na Reacta", done: done },
+  { id: 1, content: "przejść na Reacta", done: true },
   { id: 2, content: "rzucić wszystko i wyjechać w bieszczady", done: false },
 ];
 

@@ -1,11 +1,11 @@
 import React from "react";
+import { Wrapper } from "./styled";
 
-import "./style.css";
 
 const Container = ({children}) => (
-    <main className= "container">
+    <Wrapper>
         {children}
-    </main>
+    </Wrapper>
 );
 
 export default Container;

@@ -6,7 +6,6 @@ import Buttons from "./Buttons";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
 import Container from "../../common/Container";
-import { useTasks } from "../../useTasks";
 import { selectTasks } from './tasksSlice';
 
 
@@ -14,34 +13,23 @@ import { selectTasks } from './tasksSlice';
 function Tasks() {
   const { tasks } = useSelector(selectTasks);
 
-  const {
-    // tasks,
-    removeTask,
-    toggleTaskDone,
-    setAllDone,
-    addNewTask,
-  } = useTasks();
 
   return (
     <Container>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask} />}
+        body={<Form />}
       />
 
       <Section
         title="Lista zadań"
         body={
-          <TaskList
-            removeTask={removeTask}
-            toggleTaskDone={toggleTaskDone}
-          />
+          <TaskList/>
         }
+        
         extraHeaderContent={
-          <Buttons
-            setAllDone={setAllDone}
-          />
+          <Buttons/>
         }
       />
 

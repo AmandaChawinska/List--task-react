@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/List--task-react/static/js/main.b180b82f.chunk.js",
-    "main.js.map": "/List--task-react/static/js/main.b180b82f.chunk.js.map",
+    "main.js": "/List--task-react/static/js/main.9e1f97b1.chunk.js",
+    "main.js.map": "/List--task-react/static/js/main.9e1f97b1.chunk.js.map",
     "runtime-main.js": "/List--task-react/static/js/runtime-main.19a82bdb.js",
     "runtime-main.js.map": "/List--task-react/static/js/runtime-main.19a82bdb.js.map",
     "static/js/2.75721209.chunk.js": "/List--task-react/static/js/2.75721209.chunk.js",
     "static/js/2.75721209.chunk.js.map": "/List--task-react/static/js/2.75721209.chunk.js.map",
     "index.html": "/List--task-react/index.html",
-    "precache-manifest.a46ed8709982265aa34486cb6f5aae95.js": "/List--task-react/precache-manifest.a46ed8709982265aa34486cb6f5aae95.js",
+    "precache-manifest.7199859fcb81d9cb78eeb5209ca296aa.js": "/List--task-react/precache-manifest.7199859fcb81d9cb78eeb5209ca296aa.js",
     "service-worker.js": "/List--task-react/service-worker.js",
     "static/js/2.75721209.chunk.js.LICENSE.txt": "/List--task-react/static/js/2.75721209.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.19a82bdb.js",
     "static/js/2.75721209.chunk.js",
-    "static/js/main.b180b82f.chunk.js"
+    "static/js/main.9e1f97b1.chunk.js"
   ]
 }

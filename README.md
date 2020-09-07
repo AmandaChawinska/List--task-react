@@ -3,7 +3,7 @@
 Description
 
 DEMO 
-(https://amandachawinska.github.io/List--task-react/)
+(https://amandachawinska.github.io/List-task-react/)
 
 
 

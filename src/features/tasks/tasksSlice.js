@@ -1,32 +1,43 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { getTasksFromLocalStorage } from './tasksLocalStorage';
 
 const tasksSlice = createSlice({
     name: 'tasks',
     initialState: {
-        tasks: [],
+        tasks: getTasksFromLocalStorage(),
         hideDone: false,
     },
     reducers: {
-        addTask: ({ tasks }, { payload }) => {
-            tasks.push(payload);
+        addTask: ({ tasks }, { payload: task }) => {
+            tasks.push(task);
         },
         toggleHideDone: state => {
             state.hideDone = !state.hideDone;
         },
-        toggleTaskDone: (state, action) => {
-            const index = state.tasks.findIndex(task => task.id === action.payload);
-            state.tasks[index].done = !state.tasks[index].done;
+        toggleTaskDone: ({ tasks }, { payload: taskId }) => {
+            const index = tasks.findIndex(({ id }) => id === taskId);
+            tasks[index].done = !tasks[index].done;
         },
-        setAllDone: state => {
-            state.tasks = state.tasks.map(task => ({ ...task, done: true }))
+        setAllDone: ({ tasks }) => {
+            for (const task of tasks) {
+                task.done = true;
+            }
         },
-        removeTask: (state, action) => {
-            state.tasks = state.tasks.filter(task => task.id !== action.payload)
+        removeTask: ({ tasks }, { payload: taskId }) => {
+            const index = tasks.findIndex(({ id }) => id === taskId);
+            tasks.splice(index, 1);
         },
         removeAllTasks: (state) => {
             state.tasks = [];
         },
+        fetchExampleTasks: () => { },
+
+        setTasks: (state, {payload: tasks}) => {
+            state.tasks=tasks;
+        },
     },
+
+
 });
 export const {
     addTask,
@@ -35,6 +46,8 @@ export const {
     setAllDone,
     removeTask,
     removeAllTasks,
+    fetchExampleTasks,
+    setTasks,
 } = tasksSlice.actions;
 export const selectTasks = state => state.tasks;
 export default tasksSlice.reducer;

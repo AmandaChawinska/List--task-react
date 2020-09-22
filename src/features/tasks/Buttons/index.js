@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Wrapper, Button } from "./styled";
-import { selectTasks, toggleHideDone, setAllDone, removeAllTasks } from "../tasksSlice";
+import { selectTasks, toggleHideDone, setAllDone, removeAllTasks, fetchExampleTasks } from "../tasksSlice";
 
 
 const Buttons = () => {
@@ -9,6 +9,9 @@ const Buttons = () => {
     const dispatch = useDispatch();
 return (
     <Wrapper>
+        <Button onClick = {() => dispatch(fetchExampleTasks())}>
+            Pobierz przykładowe zadania
+        </Button>
         {tasks.length > 0 && (
             <>
 

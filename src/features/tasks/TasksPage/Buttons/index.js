@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Wrapper, Button } from "./styled";
-import { selectTasks, toggleHideDone, setAllDone, removeAllTasks, fetchExampleTasks } from "../tasksSlice";
+import { Wrapper} from "./styled";
+import Button from "../Button";
+import { selectTasks, toggleHideDone, setAllDone, removeAllTasks, fetchExampleTasks } from "../../tasksSlice";
 
 
 const Buttons = () => {

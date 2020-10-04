@@ -1,18 +1,17 @@
 import React from 'react';
-import { useSelector } from "react-redux";
-import Form from "./Form";
+import Form from "../TasksPage/Form";
 import TaskList from "./TaskList";
 import Buttons from "./Buttons";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
-import Container from "../../common/Container";
-import { selectTasks } from './tasksSlice';
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
+import Container from "../../../common/Container";
+import Search from "./Search";
 
 
 
-function Tasks() {
-  const { tasks } = useSelector(selectTasks);
 
+
+function TasksPage() {
 
   return (
     <Container>
@@ -21,7 +20,10 @@ function Tasks() {
         title="Dodaj nowe zadanie"
         body={<Form />}
       />
-
+ <Section
+        title="Wyszukiwarka"
+        body={<Search/>}
+      />
       <Section
         title="Lista zadań"
         body={
@@ -37,4 +39,4 @@ function Tasks() {
   )
 };
 
-export default Tasks;
+export default TasksPage;
